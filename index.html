@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garrett Carrol - AI/ML Systems Engineer</title>
+    <meta name="description" content="Portfolio showcasing AI/ML systems, blockchain protocols, and innovative technology solutions">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #7B3FFF 0%, #00D9FF 100%);
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(123, 63, 255, 0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .project-card {
+            background: rgba(30, 35, 60, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid rgba(123, 63, 255, 0.3);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7B3FFF, #00D9FF);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(123, 63, 255, 0.4);
+            border-color: #00D9FF;
+        }
+
+        .project-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #00D9FF;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .revenue {
+            color: #4ade80;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background: rgba(123, 63, 255, 0.3);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            border: 1px solid rgba(123, 63, 255, 0.5);
+        }
+
+        .description {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            font-size: 0.9em;
+            color: #a0a0a0;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .status.production {
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+            border: 1px solid #4ade80;
+        }
+
+        .status.development {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+            border: 1px solid #ffc107;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px;
+            background: rgba(123, 63, 255, 0.1);
+            border-radius: 15px;
+            border: 2px solid rgba(123, 63, 255, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #7B3FFF, #00D9FF);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(123, 63, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(123, 63, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Garrett Carrol</h1>
+            <p class="tagline">AI/ML Systems Engineer | Blockchain Protocol Developer</p>
+            <p>Building the future of decentralized intelligence and autonomous systems</p>
+            <div class="social-links">
+                <a href="https://github.com/Garrettc123" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com/in/garrett-carrol" target="_blank">🔗 LinkedIn</a>
+                <a href="mailto:garrett@example.com">📧 Contact</a>
+            </div>
+        </header>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">🧠</div>
+                <h3>NWU Protocol</h3>
+                <p class="revenue">Blockchain Innovation</p>
+                <div class="tags">
+                    <span class="tag">Web3</span>
+                    <span class="tag">AI Verification</span>
+                    <span class="tag">Smart Contracts</span>
+                </div>
+                <p class="description">
+                    Decentralized protocol for AI-verified contributions with automated reward distribution. 
+                    Features multi-agent verification, IPFS storage, and blockchain-based incentive mechanisms.
+                </p>
+                <p class="tech-stack">
+                    <strong>Tech:</strong> Python, FastAPI, Next.js 14, PostgreSQL, IPFS, RabbitMQ, LangChain, Web3
+                </p>
+                <span class="status development">🚧 In Development</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🤖</div>
+                <h3>Agent-Alpha Verifier</h3>
+                <p class="revenue">AI Quality Assurance</p>
+                <div class="tags">
+                    <span class="tag">LangChain</span>
+                    <span class="tag">GPT-4</span>
+                    <span class="tag">Code Analysis</span>
+                </div>
+                <p class="description">
+                    Autonomous AI agent for code quality verification, plagiarism detection, and security vulnerability scanning. 
+                    Integrates with verification workflows via message queue architecture.
+                </p>
+                <p class="tech-stack">
+                    <strong>Tech:</strong> Python, LangChain, OpenAI API, RabbitMQ, PyTorch
+                </p>
+                <span class="status development">🚧 In Development</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">☁️</div>
+                <h3>Cloud Infrastructure Stack</h3>
+                <p class="revenue">Enterprise DevOps</p>
+                <div class="tags">
+                    <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Microservices</span>
+                </div>
+                <p class="description">
+                    Production-ready containerized infrastructure with auto-scaling, health monitoring, 
+                    and complete CI/CD pipeline. Supports distributed systems with message queuing and caching.
+                </p>
+                <p class="tech-stack">
+                    <strong>Tech:</strong> Docker, Kubernetes, NGINX, PostgreSQL, Redis, RabbitMQ
+                </p>
+                <span class="status production">✅ Production Ready</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🔐</div>
+                <h3>Web3 Authentication System</h3>
+                <p class="revenue">Security Infrastructure</p>
+                <div class="tags">
+                    <span class="tag">JWT</span>
+                    <span class="tag">Web3</span>
+                    <span class="tag">Cryptography</span>
+                </div>
+                <p class="description">
+                    Secure wallet-based authentication with JWT token management, signature verification, 
+                    and role-based access control for decentralized applications.
+                </p>
+                <p class="tech-stack">
+                    <strong>Tech:</strong> Node.js, Web3.js, JWT, MetaMask, WalletConnect
+                </p>
+                <span class="status production">✅ Production Ready</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">📊</div>
+                <h3>Real-Time Analytics Dashboard</h3>
+                <p class="revenue">Data Visualization</p>
+                <div class="tags">
+                    <span class="tag">Next.js 14</span>
+                    <span class="tag">WebSocket</span>
+                    <span class="tag">TailwindCSS</span>
+                </div>
+                <p class="description">
+                    Interactive dashboard with real-time data streaming, contribution tracking, 
+                    reward calculations, and user analytics with responsive design.
+                </p>
+                <p class="tech-stack">
+                    <strong>Tech:</strong> Next.js 14, React, TailwindCSS, WebSocket, Chart.js
+                </p>
+                <span class="status development">🚧 In Development</span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">💾</div>
+                <h3>Decentralized Storage Integration</h3>
+                <p class="revenue">IPFS Infrastructure</p>
+                <div class="tags">
+                    <span class="tag">IPFS</span>
+                    <span class="tag">Distributed Systems</span>
+                    <span class="tag">P2P</span>
+                </div>
+                <p class="description">
+                    Content-addressed storage system with automatic pinning, retrieval optimization, 
+                    and cryptographic verification for tamper-proof data integrity.
+                </p>
+                <p class="tech-stack">
+                    <strong>Tech:</strong> IPFS, Kubo, Go, Content Hashing, Merkle DAG
+                </p>
+                <span class="status production">✅ Production Ready</span>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Let's Build Something Amazing</h2>
+            <p>Interested in collaborating on cutting-edge AI, blockchain, or distributed systems projects?</p>
+            <a href="https://github.com/Garrettc123" class="cta-button" target="_blank">View GitHub Profile</a>
+            <a href="https://github.com/Garrettc123/nwu-protocol" class="cta-button" target="_blank">Explore NWU Protocol</a>
+        </div>
+    </div>
+</body>
+</html>
